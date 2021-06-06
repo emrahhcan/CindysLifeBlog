@@ -1,4 +1,4 @@
 # Cindy's Life
 
-* Blog page called Cindy's Life
-* It will update to full reponsive view
+* Dynamic blog website called Cindy's Life
+* App is still in progress.
