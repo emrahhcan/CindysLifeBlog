@@ -4,4 +4,4 @@
 * MVC model applied without using OOP.
 * Design has been changed.
 * App is still being developed.
-* All password are hashed using PHP password hashing algorithm.
+* All passwords are hashed using PHP password hashing algorithm.
