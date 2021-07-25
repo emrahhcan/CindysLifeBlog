@@ -28,7 +28,7 @@
                         <a id="dropdown"><?php echo $_SESSION['username']; ?></a>
                             <div class="dropdown-content">
                                 <?php if($_SESSION['admin'] === 1): ?>
-                                    <a href="<?php echo URLROOT; ?>/#">Admin</a>
+                                    <a href="<?php echo URLROOT; ?>/admin/tags/create.php">Admin</a>
                                     <a href="<?php echo URLROOT; ?>/logout.php">Log Out</a>
                                 <?php else: ?>
                                     <a href="<?php echo URLROOT; ?>/logout.php">Log Out</a>

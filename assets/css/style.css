@@ -135,7 +135,7 @@ body {
         transition: var(--transition);
     }
     .show-links {
-        height: 20rem;
+        height: 25rem;
     }
     .navbar ul {
         display: block;
@@ -293,30 +293,44 @@ body {
     opacity: 0.7;
 }
 .about-container {
-    height: 58rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
-    padding: 5rem 6rem;
+    padding: 7rem 6rem;
     background: linear-gradient(to bottom, var(--light-primary), var(--pink));
 }
+.about-me {
+    font-size: 1.5rem; 
+    color: white; 
+    text-align: justify;
+}
 .contact-container {
-    height: 40rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
-    padding: 5rem 6rem;
+    padding: 7rem 6rem;
     background-color: var(--white);
+}
+.contact-container form textarea {
+    width: 17.5rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+    outline: none;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
 }
 :is(.footer, .icon-map div h1 .icon-map div a, .footer-end) {
     color: var(--white);
     text-align: center;
 }
-:is(.login-container, .login-container form) {
+:is(.login-container, .login-container form, .contact-container form) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,30 +346,31 @@ body {
     height: 50rem;
     padding: 6.5rem 0 0 0;
 }
-:is(.login-container form input, .login-container form button) {
+:is(.login-container form input, .login-container form button, .contact-container form input, .contact-container form button) {
     width: 17.5rem;
     height: 3rem;
     margin-bottom: 1rem;
     outline: none;
     font-size: 1.3rem;
 }
-.login-container form input  {
+:is(.login-container form input, .contact-container form input, .contact-container form textarea) {
     border: none;
     border-bottom: 1px solid var(--secondary);
     padding: 0.5rem;
 }
-.login-container form button {
+:is(.login-container form button, .contact-container form button) {
     border: 1px solid var(--secondary);
     border-radius: 5px;
     background: var(--white);
     text-transform: uppercase;
     color: var(--secondary);
 }
-.login-container form button:hover {
+:is(.login-container form button:hover, .contact-container form button:hover) {
     cursor: pointer;
     border: none;
     background: var(--pink);
     color: var(--white);
+    transition: var(--transition);
 }
 .options {
     color: var(--secondary);
@@ -490,7 +505,9 @@ body {
 .dropdown:hover {
     background-color: var(--pink);
 }
-.active {background-color: var(--pink);}
+.active {
+    background-color: var(--pink);
+}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -510,11 +527,15 @@ body {
     font-size: 15px;
     border-radius: 0 0 10px 10px;
 }
-.dropdown-content a:hover {background-color: var(--primary)}
-.show {display:block;}
+.dropdown-content a:hover {
+    background-color: var(--primary)
+}
+.show {
+    display:block;
+}
 .dashboard-container {
     display: flex;
-    padding: 5rem 20rem;
+    padding: 10rem 6rem;
     grid-gap: 50px;
 }
 .dashboard-menu{
@@ -525,7 +546,36 @@ body {
     width: 25%;
     height: auto;
 }
-:is(.all-posts, .create, .update, .delete, .submit-button) {
+.dashboard-content {
+    width: 75%;
+    min-height: 600px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3;
+}
+.edit {
+    color: green;
+}
+.delete {
+    color: red;
+}
+.publish {
+    color: blue;
+}
+.edit:hover,
+.delete:hover,
+.publish:hover {
+    text-decoration: underline;
+}
+:is(.all-posts, .submit-button) {
     width: 100%;
     height: 2.5rem;
     line-height: 2.5rem;
@@ -539,58 +589,17 @@ body {
     cursor: pointer;
     background-color: var(--white);
 }
-:is(.all-posts:hover, .create:hover, .update:hover, .delete:hover, .submit-button:hover) {
-    background-color: var(--white);
+:is(.all-posts:hover, .submit-button:hover) {
     transition: var(--transition);
-    border: 2px solid;
-    color: var(--secondary);
+    color: var(--white);
 }
 .all-posts {
-    border-color: var(--pink);
+    border: 1px solid var(--pink);
 }
 .all-posts:hover {
     background-color: var(--pink);
 }
-.create {
-    width: 17.5rem;
-    background-color: var(--green);
-    text-decoration: none;
-    color: white;
-}
-.create:hover {
-    color: var(--secondary);
-    border-color: var(--green);
-}
-.update {
-    background-color: var(--warning);
-    text-align: center;
-    border-radius: 10px 0 0 10px;
-}
-.update a {
-    text-decoration: none;
-    color: var(--white);
-}
-.update:hover {
-    border-color: var(--warning);
-}
-.update-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 6.5rem;
-}
-.delete {
-    border:none;
-    background-color: var(--danger);
-    color: white;
-    border-radius: 0 10px 10px 0;
-}
-.delete:hover {
-    border-color: var(--danger);
-    color: var(--secondary);
-}
-.update-delete {
+.update-add {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-content: center;
@@ -616,7 +625,9 @@ body {
     border: none;
     border-bottom: 2px solid var(--secondary);
 }
-.title:focus {border-color: var(--pink);}
+.title:focus {
+    border-color: var(--pink);
+}
 .content {
     width: 100%;
     height: 20rem;
