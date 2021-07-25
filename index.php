@@ -24,27 +24,39 @@
         <?php include(APPROOT . '/app/includes/secondaryDivider.php'); ?>
         <div class="tags-content">
             <div class="img-wrapper">
-                <span class="overlay">Content</span>
+                <span class="overlay">
+                    <p>Content</p>  
+                </span>
                 <img class="tag-images" src="assets/img/tags/cabin.png" alt="" />
             </div>
             <div class="img-wrapper">
-                <span class="overlay">Content</span>
+                <span class="overlay">
+                    <p>Content</p>
+                </span>
                 <img class="tag-images" src="assets/img/tags/cake.png" alt="" />
             </div>
             <div class="img-wrapper">
-                <span class="overlay">Content</span>
+                <span class="overlay">
+                    <p>Content</p>
+                </span>
                 <img class="tag-images" src="assets/img/tags/game.png" alt="" />
             </div>
             <div class="img-wrapper">
-                <span class="overlay">Content</span>
+                <span class="overlay">
+                    <p>Content</p>
+                </span>
                 <img class="tag-images" src="assets/img/tags/submarine.png" alt="" />
             </div>
             <div class="img-wrapper">
-                <span class="overlay">Content</span>
+                <span class="overlay">
+                    <p>Content</p>
+                </span>
                 <img class="tag-images" src="assets/img/tags/circus.png" alt="" />
             </div>
             <div class="img-wrapper">
-                <span class="overlay">Content</span>
+                <span class="overlay">
+                    <p>Content</p>
+                </span>
                 <img class="tag-images" src="assets/img/tags/safe.png" alt="" />
             </div>
         </div>
