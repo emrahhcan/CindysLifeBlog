@@ -1,3 +1,6 @@
+<?php
+    include('../../path.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +27,11 @@
         </div>
         <div class="navigation">
             <ul class="links">
-                <a href="#!">
+                <a href="<?php echo URLROOT . '/index.php'; ?>">
                     <li>Home</li>
+                </a>
+                <a href="<?php echo URLROOT; ?>/logout.php">
+                    <li>Log Out</li>
                 </a>
             </ul>
         </nav>
@@ -36,7 +42,7 @@
                 <a href="#" class="all-posts"><div>All Users</div></a>
             </div>
             <div class="dashboard-content">
-                <h2 class="page-title">Add a New Tag</h2>
+            <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>"><button class="all-posts">Manage Tags</button></a>
                 <form action="create.html" method="post">
                     <div>
                         <label>Name</label>
@@ -53,7 +59,7 @@
                 </form>
             </div>
         </header>
-
     </div>
+    <script src="../../assets/javascript/menuToggler.js"></script>
 </body>
 </html>

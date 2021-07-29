@@ -27,8 +27,11 @@
             </div>
             <div class="navigation">
                 <ul class="links">
-                    <a href="#!">
+                    <a href="<?php echo URLROOT . '/index.php'; ?>">
                         <li>Home</li>
+                    </a>
+                    <a href="<?php echo URLROOT . '/logout.php'; ?>">
+                        <li>Log Out</li>
                     </a>
                 </ul>
             </div>
@@ -40,10 +43,7 @@
                 <a href="<?php echo URLROOT . '/admin/users/index.php'; ?>" class="all-posts"><div>All Users</div></a>
             </div>
             <div class="dashboard-content">
-                <div class="update-add">
-                    <button class="all-posts">Add New</button>
-                    <button class="all-posts">All Tags</button>
-                </div>
+                <a href="<?php echo URLROOT . '/admin/tags/create.php' ?>"><button class="all-posts">Add New</button></a>
                 <table>
                     <thead>
                         <th>SN</th>
@@ -69,5 +69,6 @@
         </header>
 
     </div>
+    <script src="../../assets/javascript/menuToggler.js"></script>
 </body>
 </html>
