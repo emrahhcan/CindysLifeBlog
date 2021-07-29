@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <title>Cindy's Life - Add Tags</title>
+    <title>Cindy's Life - Add Users</title>
 </head>
 <body>
     <div class="container-self">
@@ -42,19 +42,37 @@
                 <a href="<?php echo URLROOT . '/admin/users/index.php'; ?>" class="all-posts"><div>All Users</div></a>
             </div>
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>"><button class="all-posts">Manage Tags</button></a>
+                <a href="<?php echo URLROOT . '/admin/users/index.php' ?>"><button class="all-posts">Manage Users</button></a>
                 <form action="create.html" method="post">
                     <div>
-                        <label>Name</label>
-                        <input type="text" name="name" class="text-input">
+                        <label>Username</label>
+                        <input type="text" name="username"
+                            class="text-input">
                     </div>
                     <div>
-                        <label>Description</label>
-                        <textarea name="description" id="body"></textarea>
+                        <label>Email</label>
+                        <input type="email" name="email" class="text-input">
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password"
+                            class="text-input">
+                    </div>
+                    <div>
+                        <label>Password Confirmation</label>
+                        <input type="password" name="passwordConf"
+                            class="text-input">
+                    </div>
+                    <div>
+                        <label>Role</label>
+                        <select name="role" class="text-input">
+                            <option value="Author">Member</option>
+                            <option value="Admin">Admin</option>
+                        </select>
                     </div>
 
                     <div>
-                        <button type="submit" class="btn btn-big">Add Tag</button>
+                        <button type="submit" class="btn btn-big">Add User</button>
                     </div>
                 </form>
             </div>

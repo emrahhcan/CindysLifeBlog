@@ -43,7 +43,7 @@
                 <a href="<?php echo URLROOT . '/admin/users/index.php'; ?>" class="all-posts"><div>All Users</div></a>
             </div>
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/tags/create.php' ?>"><button class="all-posts">Add New</button></a>
+                <a href="<?php echo URLROOT . '/admin/users/create.php' ?>"><button class="all-posts">Add New</button></a>
                 <table>
                     <thead>
                         <th>ID</th>
