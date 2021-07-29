@@ -54,14 +54,14 @@
                         <tr>
                             <td>1</td>
                             <td>Poetry</td>
-                            <td><a href="#" class="edit">edit</a></td>
-                            <td><a href="#" class="delete">delete</a></td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                            <td><a href="#" class="delete">Delete</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Life Lessons</td>
-                            <td><a href="#" class="edit">edit</a></td>
-                            <td><a href="#" class="delete">delete</a></td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                            <td><a href="#" class="delete">Delete</a></td>
                         </tr>
                     </tbody>
                 </table>
