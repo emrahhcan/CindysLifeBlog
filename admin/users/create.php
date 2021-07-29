@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <title>Cindy's Life - Add Users</title>
+    <title>Cindy's Life - Add User</title>
 </head>
 <body>
     <div class="container-self">

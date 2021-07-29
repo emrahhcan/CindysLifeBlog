@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <title>Cindy's Life - Update User</title>
+    <title>Cindy's Life - Add Post</title>
 </head>
 <body>
     <div class="container-self">
@@ -42,39 +42,36 @@
                 <a href="<?php echo URLROOT . '/admin/users/index.php'; ?>" class="all-posts"><div>All Users</div></a>
             </div>
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/users/index.php' ?>"><button class="all-posts">Manage Users</button></a>
+                <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>"><button class="all-posts">Manage Posts</button></a>
                 <form action="create.html" method="post">
                     <div>
-                        <label>Username</label>
-                        <input type="text" name="username" class="text-input">
+                        <label>Title</label>
+                        <input type="text" name="title" class="text-input">
                     </div>
                     <div>
-                        <label>Email</label>
-                        <input type="email" name="email" class="text-input">
+                        <label>Body</label>
+                        <textarea name="body" id="body"></textarea>
                     </div>
                     <div>
-                        <label>Password</label>
-                        <input type="password" name="password" class="text-input">
+                        <label>Image</label>
+                        <input type="file" name="image" class="text-input">
                     </div>
                     <div>
-                        <label>Password Confirmation</label>
-                        <input type="password" name="passwordConf" class="text-input">
-                    </div>
-                    <div>
-                        <label>Authorization</label>
-                        <select name="role" class="text-input">
-                            <option value="Author">Member</option>
-                            <option value="Admin">Admin</option>
+                        <label>Topic</label>
+                        <select name="topic" class="text-input">
+                            <option value="Poetry">Poetry</option>
+                            <option value="Life Lessons">Life Lessons</option>
                         </select>
                     </div>
-
                     <div>
-                        <button type="submit" class="btn btn-big">Edit User</button>
+                        <button type="submit" class="btn btn-big">Add Post</button>
                     </div>
                 </form>
             </div>
         </header>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
     <script src="../../assets/javascript/menuToggler.js"></script>
 </body>
 </html>
