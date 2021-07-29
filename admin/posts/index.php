@@ -56,7 +56,7 @@
                             <td>1</td>
                             <td>This is the first sample post</td>
                             <td>Emrah</td>
-                            <td><a href="#" class="edit">Edit</a></td>
+                            <td><a href="#" class="update">Update</a></td>
                             <td><a href="#" class="delete">Delete</a></td>
                             <td><a href="#" class="publish">Publish</a></td>
                         </tr>
@@ -64,7 +64,7 @@
                             <td>2</td>
                             <td>This is the second sample post</td>
                             <td>Cindy</td>
-                            <td><a href="#" class="edit">Edit</a></td>
+                            <td><a href="#" class="update">Update</a></td>
                             <td><a href="#" class="delete">Delete</a></td>
                             <td><a href="#" class="publish">Publish</a></td>
                         </tr>

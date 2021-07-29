@@ -56,14 +56,14 @@
                             <td>1</td>
                             <td>Cindy</td>
                             <td>Admin</td>
-                            <td><a href="#" class="edit">Edit</a></td>
+                            <td><a href="#" class="update">Update</a></td>
                             <td><a href="#" class="delete">Delete</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Emrah</td>
                             <td>Member</td>
-                            <td><a href="#" class="edit">Edit</a></td>
+                            <td><a href="#" class="update">Update</a></td>
                             <td><a href="#" class="delete">Delete</a></td>
                         </tr>
                     </tbody>
