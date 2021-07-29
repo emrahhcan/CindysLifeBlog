@@ -1,3 +1,6 @@
+<?php
+    include('../../path.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,24 +19,25 @@
 <body>
     <div class="container-self">
         <nav class="navbar">
-        <div class="toggle-menu">
-            <a href="<?php echo URLROOT; ?>/index.php" class="logo">Cindy's Life</a>
-            <button class="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button> 
-        </div>
-        <div class="navigation">
-            <ul class="links">
-                <a href="#!">
-                    <li>Home</li>
-                </a>
-            </ul>
+            <div class="toggle-menu">
+                <a href="<?php echo URLROOT . '/index.php' ?>" class="logo">Cindy's Life</a>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button> 
+            </div>
+            <div class="navigation">
+                <ul class="links">
+                    <a href="#!">
+                        <li>Home</li>
+                    </a>
+                </ul>
+            </div>
         </nav>
         <header class="dashboard-container">
             <div class="dashboard-menu">
-                <a href="#" class="all-posts"><div>All Posts</div></a>
-                <a href="#" class="all-posts"><div>All Tags</div></a>
-                <a href="#" class="all-posts"><div>All Users</div></a>
+                <a href="<?php echo URLROOT . '/admin/posts/index.php'; ?>" class="all-posts"><div>All Posts</div></a>
+                <a href="<?php echo URLROOT . '/admin/tags/index.php'; ?>" class="all-posts"><div>All Tags</div></a>
+                <a href="<?php echo URLROOT . '/admin/users/index.php'; ?>" class="all-posts"><div>All Users</div></a>
             </div>
             <div class="dashboard-content">
                 <div class="update-add">
