@@ -1,6 +1,6 @@
 <?php
     include('../../path.php');
-    include('../../' . APPROOT . '/app/database/db.php');
+    include('../../' . APPROOT . '/app/controllers/tags.php');
     include('../../' . APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
@@ -17,18 +17,21 @@
                         <th colspan="2">Action</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Poetry</td>
-                            <td><a href="#" class="update">Update</a></td>
-                            <td><a href="#" class="delete">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Life Lessons</td>
-                            <td><a href="#" class="update">Update</a></td>
-                            <td><a href="#" class="delete">Delete</a></td>
-                        </tr>
+
+                        <?php foreach($tags as $key => $tag): ?>
+                            <tr>
+                                <td>
+                                    <?php echo $key + 1; ?>
+                                </td>
+                                <td>
+                                    <?php echo $tag['name']; ?>
+                                </td>
+                                <td>
+                                    <a href="update.php?id=<?php echo $tag['id']; ?>" class="update">Update</a>
+                                </td>
+                                <td><a href="#" class="delete">Delete</a></td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

@@ -1,6 +1,6 @@
 <?php
     include('../../path.php');
-    include('../../' . APPROOT . '/app/database/db.php');
+    include('../../' . APPROOT . '/app/controllers/tags.php');
     include('../../' . APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
