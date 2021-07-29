@@ -1,5 +1,6 @@
 <?php
     include('../../path.php');
+    include('../../' . APPROOT . '/app/database/db.php');
     include('../../' . APPROOT . '/app/controllers/tags.php');
     include('../../' . APPROOT . '/app/includes/dashboardHead.php');
 ?>
@@ -9,6 +10,7 @@
             <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
             <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>"><button class="all-posts">Manage Tags</button></a>
+                <?php include('../../' . APPROOT . '/app/helpers/formErrors.php'); ?>
                 <form action="update.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div>

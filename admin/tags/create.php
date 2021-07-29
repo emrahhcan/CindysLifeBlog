@@ -1,5 +1,6 @@
 <?php
     include('../../path.php');
+    include('../../' . APPROOT . '/app/database/db.php');
     include('../../' . APPROOT . '/app/controllers/tags.php');
     include('../../' . APPROOT . '/app/includes/dashboardHead.php');
 ?>
@@ -8,15 +9,20 @@
         <header class="dashboard-container">
             <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>"><button class="all-posts">Manage Tags</button></a>
+                <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>">
+                    <button class="all-posts">Manage Tags</button>
+                </a>
+                <?php include('../../' . APPROOT . '/app/helpers/formErrors.php'); ?>
                 <form action="create.php" method="post">
                     <div>
                         <label>Name</label>
-                        <input type="text" name="name" class="text-input">
+                        <input type="text" name="name" value="<?php echo $name; ?>" class="text-input">
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea name="description" id="body"></textarea>
+                        <textarea name="description" id="body">
+                            <?php echo $description; ?>
+                        </textarea>
                     </div>
 
                     <div>

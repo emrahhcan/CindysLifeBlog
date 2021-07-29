@@ -1,5 +1,6 @@
 <?php
     include('../../path.php');
+    include('../../' . APPROOT . '/app/database/db.php');
     include('../../' . APPROOT . '/app/controllers/tags.php');
     include('../../' . APPROOT . '/app/includes/dashboardHead.php');
 ?>
@@ -29,7 +30,7 @@
                                 <td>
                                     <a href="update.php?id=<?php echo $tag['id']; ?>" class="update">Update</a>
                                 </td>
-                                <td><a href="#" class="delete">Delete</a></td>
+                                <td><a href="index.php?del_id=<?php echo $tag['id']; ?>" class="delete">Delete</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

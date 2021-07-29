@@ -10,6 +10,9 @@
             <a href="<?php echo URLROOT . '/index.php'; ?>">
                 <li>Home</li>
             </a>
+            <a href="<?php echo URLROOT . '/blog.php'; ?>">
+                <li>Blog</li>
+            </a>
             <a href="<?php echo URLROOT . '/logout.php'; ?>">
                 <li>Log Out</li>
             </a>

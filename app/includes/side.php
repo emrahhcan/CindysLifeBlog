@@ -16,16 +16,13 @@
             <div class="row">
                 <div class="col-sm-6">
                     <ul class="list-unstyled mb-0">
-                        <li><a href="#!">Life</a></li>
-                        <li><a href="#!">Fun</a></li>
-                        <li><a href="#!">Food</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6">
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#!">Party</a></li>
-                        <li><a href="#!">Travel</a></li>
-                        <li><a href="#!">Daily</a></li>
+                        <?php foreach($tags as $key => $tag): ?>
+                            <li>
+                                <a href="#!">
+                                    <?php echo $tag['name']; ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
