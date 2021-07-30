@@ -8,7 +8,7 @@
 
         $existTag = selectOne('tags', ['name' => $tag['name']]);
 
-        if(isset($existTag)) {
+        if($existTag) {
             array_push($errors, 'This tag is already exist!');
         }
 

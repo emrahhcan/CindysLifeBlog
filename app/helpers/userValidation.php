@@ -15,7 +15,7 @@
 
         if(empty($user['email'])) {
             array_push($errors, 'Email is required!');
-        } elseif(isset($existingUser)) {
+        } elseif($existingUser) {
             array_push($errors, 'Email is already exist!');
         }
 
