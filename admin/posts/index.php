@@ -28,8 +28,8 @@
                                     <?php echo $post['title']; ?>
                                 </td>
                                 <td>Emrah</td>
-                                <td><a href="#" class="update">Update</a></td>
-                                <td><a href="#" class="delete">Delete</a></td>
+                                <td><a href="update.php?id=<?php echo $post['id']; ?>" class="update">Update</a></td>
+                                <td><a href="update.php?delete_id=<?php echo $post['id']; ?>" class="delete">Delete</a></td>
                                 <?php if($post['published']): ?>
                                     <td>
                                         <a href="#" class="unpublish">Draft</a>
