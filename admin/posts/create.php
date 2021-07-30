@@ -10,14 +10,17 @@
             <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/posts/index.php' ?>"><button class="all-posts">Manage Posts</button></a>
+                <?php include('../../' . APPROOT . '/app/helpers/formErrors.php'); ?> 
                 <form action="create.php" method="post">
                     <div>
                         <label>Title</label>
-                        <input type="text" name="title" class="text-input">
+                        <input type="text" name="title" value="<?php echo $title; ?>" class="text-input">
                     </div>
                     <div>
                         <label>Body</label>
-                        <textarea name="body" id="body"></textarea>
+                        <textarea name="body" id="body">
+                            <?php echo $body; ?>
+                        </textarea>
                     </div>
                     <div>
                         <label>Image</label>
@@ -28,9 +31,20 @@
                         <select name="tag_id" class="text-input">
                             <option value="">Choose a Tag</option>
                             <?php foreach($tags as $key => $tag): ?>
-                                <option value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
+                                <?php if(!empty($tag_id) && $tag_id == $tag['id']): ?>
+                                    <option selected value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
+                                <?php else: ?>
+                                    <option value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="published">
+                            Publish 
+                            <span style="color: maroon;">(The post will be saved as draft if you don't publish)</span>
+                        </label>
                     </div>
                     <div>
                         <button type="submit" name="add-post" class="btn btn-big">Add Post</button>

@@ -10,6 +10,7 @@
             <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/posts/create.php' ?>"><button class="all-posts">Add a New Post</button></a>
+                <?php include('../../' . APPROOT . '/app/includes/messages.php'); ?>
                 <table>
                     <thead>
                         <th>ID</th>
