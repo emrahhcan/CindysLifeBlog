@@ -34,6 +34,19 @@
         exit();
     }
 
+    if(isset($_GET['published']) && isset($_GET['p_id'])) {
+        $published = $_GET['published'];
+        $p_id = $_GET['p_id'];
+
+        $count = update($table, $p_id, ['published' => $published]);
+
+        $_SESSION['message'] = 'Post state has been changed!';
+        $_SESSION['type'] = 'success';
+        
+        header('location: ' . URLROOT . '/admin/posts/index.php');
+        exit();
+    }
+
     if(isset($_POST['add-post'])) {
         $errors = postValidation($_POST);
 

@@ -32,11 +32,11 @@
                                 <td><a href="update.php?delete_id=<?php echo $post['id']; ?>" class="delete">Delete</a></td>
                                 <?php if($post['published']): ?>
                                     <td>
-                                        <a href="#" class="unpublish">Draft</a>
+                                        <a href="update.php?published=0&p_id=<?php echo $post['id']; ?>" class="unpublish">Draft</a>
                                     </td>
                                 <?php else: ?>
                                     <td>
-                                        <a href="#" class="publish">Publish</a>
+                                        <a href="update.php?published=1&p_id=<?php echo $post['id']; ?>" class="publish">Publish</a>
                                     </td>
                                 <?php endif; ?>
                             </tr>
