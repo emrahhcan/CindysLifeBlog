@@ -10,18 +10,29 @@
     $confirmPassword = '';
     $table = 'users';
 
-    if(isset($_POST['register-btn'])) {
+    if(isset($_POST['register-btn']) || isset($_POST['create-admin'])) {
         $errors = userValidation($_POST);
 
         if(count($errors) === 0) {
-            unset($_POST['register-btn'], $_POST['confirmPassword']);
-            $_POST['admin'] = 0;
+            unset($_POST['register-btn'], $_POST['confirmPassword'], $_POST['create-admin']);
             $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-            $user_id = create($table, $_POST);
-            $user = selectOne($table, ['id' => $user_id]);
+            if(isset($_POST['admin'])) {
+                $_POST['admin'] = 1;
+                $user_id = create($table, $_POST);
 
-            sessionHelper($user);
+                $_SESSION['message'] = 'User has been created successfully';
+                $_SESSION['type'] = 'success';
+                
+                header('location: ' . URLROOT . '/admin/users/index.php');
+                exit();
+            } else {
+                $_POST['admin'] = 0;
+                $user_id = create($table, $_POST);
+                $user = selectOne($table, ['id' => $user_id]);
+
+                sessionHelper($user);
+            }
         } else {
             $username = $_POST['username'];
             $email = $_POST['email'];

@@ -26,7 +26,7 @@
                     </div>
                     <div>
                         <label>Password Confirmation</label>
-                        <input type="password" name="passwordConf"
+                        <input type="password" name="confirmPassword"
                             class="text-input">
                     </div>
                     <div>

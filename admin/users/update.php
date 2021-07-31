@@ -9,7 +9,7 @@
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/users/index.php' ?>"><button class="all-posts">Manage Users</button></a>
-                <form action="create.html" method="post">
+                <form action="update.php" method="post">
                     <div>
                         <label>Username</label>
                         <input type="text" name="username" class="text-input">

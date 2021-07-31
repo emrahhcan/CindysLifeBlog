@@ -1,6 +1,6 @@
 <?php
     include('../../path.php');
-    include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/controllers/users.php');
     include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
@@ -9,6 +9,7 @@
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/users/create.php' ?>"><button class="all-posts">Add a New User</button></a>
+                <?php include(APPROOT . '/app/includes/messages.php'); ?>
                 <table>
                     <thead>
                         <th>ID</th>
