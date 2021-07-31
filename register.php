@@ -4,7 +4,7 @@
     include(APPROOT . '/app/includes/head.php'); 
 ?>
     <div class="container-self">
-        <?php include(APPROOT . '/app/includes/nav.php'); ?>
+        <?php include(APPROOT . '/app/includes/blogLoginNav.php'); ?>
 
         <div class="container">
             <header class="login-container">

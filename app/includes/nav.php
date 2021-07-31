@@ -7,7 +7,7 @@
     </div>
     <div class="navigation">
         <ul class="links">
-            <a href="<?php echo URLROOT; ?>/index.php">
+            <a href="<?php echo URLROOT; ?>/index.php/#home">
                 <li>Home</li>
             </a>
             <a href="<?php echo URLROOT; ?>/index.php/#tags">

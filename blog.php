@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container-self">
-        <?php include(APPROOT . '/app/includes/nav.php'); ?>
+        <?php include(APPROOT . '/app/includes/blogLoginNav.php'); ?>
         <div class="container">
         <?php include(APPROOT . '/app/includes/messages.php'); ?>
             <header class="blog-img py-5 bg-light border-bottom mb-4">
