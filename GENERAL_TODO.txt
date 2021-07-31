@@ -1,0 +1,2 @@
+* Make it responsive for all the pages.
+* Fix the navbar on blog page, and fix smooth scrolling problem blog to home page.
