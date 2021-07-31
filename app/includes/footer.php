@@ -5,7 +5,6 @@
                 <a href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
                 <a href="#!"><i class="fab fa-fw fa-instagram"></i></a>
                 <a href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                <a href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
             </div>
             <div class="map3"></div>
         </div>
