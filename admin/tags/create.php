@@ -1,18 +1,17 @@
 <?php
     include('../../path.php');
-    include('../../' . APPROOT . '/app/database/db.php');
-    include('../../' . APPROOT . '/app/controllers/tags.php');
-    include('../../' . APPROOT . '/app/includes/dashboardHead.php');
+    include(APPROOT . '/app/controllers/tags.php');
+    include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
-        <?php include('../../' . APPROOT . '/app/includes/dashboardNav.php'); ?>
+        <?php include(APPROOT . '/app/includes/dashboardNav.php'); ?>
         <header class="dashboard-container">
-            <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
+            <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>">
                     <button class="all-posts">Manage Tags</button>
                 </a>
-                <?php include('../../' . APPROOT . '/app/helpers/formErrors.php'); ?>
+                <?php include(APPROOT . '/app/helpers/formErrors.php'); ?>
                 <form action="create.php" method="post">
                     <div>
                         <label>Name</label>
@@ -32,4 +31,4 @@
             </div>
         </header>
     </div>
-<?php include('../../' . APPROOT . '/app/includes/dashboardEnd.php'); ?>
+<?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

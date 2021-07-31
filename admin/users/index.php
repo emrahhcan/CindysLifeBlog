@@ -1,12 +1,12 @@
 <?php
     include('../../path.php');
-    include('../../' . APPROOT . '/app/database/db.php');
-    include('../../' . APPROOT . '/app/includes/dashboardHead.php');
+    include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
-        <?php include('../../' . APPROOT . '/app/includes/dashboardNav.php'); ?>
+        <?php include(APPROOT . '/app/includes/dashboardNav.php'); ?>
         <header class="dashboard-container">
-            <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
+            <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/users/create.php' ?>"><button class="all-posts">Add a New User</button></a>
                 <table>
@@ -37,4 +37,4 @@
         </header>
 
     </div>
-<?php include('../../' . APPROOT . '/app/includes/dashboardEnd.php'); ?>
+<?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

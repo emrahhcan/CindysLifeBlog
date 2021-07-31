@@ -1,15 +1,14 @@
 <?php
     include('../../path.php');
-    include('../../' . APPROOT . '/app/database/db.php');
-    include('../../' . APPROOT . '/app/controllers/posts.php');
-    include('../../' . APPROOT . '/app/includes/dashboardHead.php');
+    include(APPROOT . '/app/controllers/posts.php');
+    include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
-        <?php include('../../' . APPROOT . '/app/includes/dashboardNav.php'); ?>
+        <?php include(APPROOT . '/app/includes/dashboardNav.php'); ?>
         <header class="dashboard-container">
-            <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
+            <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/tags/index.php' ?>"><button class="all-posts">Manage Posts</button></a>
+                <a href="<?php echo URLROOT . '/admin/posts/index.php' ?>"><button class="all-posts">Manage Posts</button></a>
                 <form action="update.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div>
@@ -40,25 +39,10 @@
                         </select>
                     </div>
                     <div>
-                        <?php if(empty($published) && $published === 0): ?>
-                            <label>
-                                <input type="checkbox" name="published">
-                                Publish 
-                                <span style="color: maroon;">(The post will be saved as draft if you don't publish)</span>
-                            </label>
-                        <?php else: ?>
-                            <label>
-                                <input type="checkbox" name="published" checked>
-                                Publish 
-                                <span style="color: maroon;">(The post will be saved as draft if you don't publish)</span>
-                            </label>
-                        <?php endif; ?>                      
-                    </div>
-                    <div>
                         <button type="submit" name="update-post" class="btn btn-big">Update Post</button>
                     </div>
                 </form>
             </div>
         </header>
     </div>
-<?php include('../../' . APPROOT . '/app/includes/dashboardEnd.php'); ?>
+<?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

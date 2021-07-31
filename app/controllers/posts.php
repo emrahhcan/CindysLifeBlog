@@ -1,5 +1,6 @@
 <?php
-    include('../../' . APPROOT . '/app/helpers/postValidation.php');
+    include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/helpers/postValidation.php');
 
     $table = 'posts';
 

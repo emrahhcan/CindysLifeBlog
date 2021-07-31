@@ -1,6 +1,6 @@
 <?php
-    // include('../../' . APPROOT . '/app/helpers/tagValidation.php');
-    include('/Applications/MAMP/htdocs/cindyslife/app/helpers/tagValidation.php');
+    include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/helpers/tagValidation.php');
 
     $table = 'tags';
     

@@ -1,16 +1,15 @@
 <?php
     include('../../path.php');
-    include('../../' . APPROOT . '/app/database/db.php');
-    include('../../' . APPROOT . '/app/controllers/posts.php');
-    include('../../' . APPROOT . '/app/includes/dashboardHead.php');
+    include(APPROOT . '/app/controllers/posts.php');
+    include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
-        <?php include('../../' . APPROOT . '/app/includes/dashboardNav.php'); ?>
+        <?php include(APPROOT . '/app/includes/dashboardNav.php'); ?>
         <header class="dashboard-container">
-            <?php include('../../' . APPROOT . '/app/includes/dashboardMenu.php'); ?>
+            <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/posts/index.php' ?>"><button class="all-posts">Manage Posts</button></a>
-                <?php include('../../' . APPROOT . '/app/helpers/formErrors.php'); ?> 
+                <?php include(APPROOT . '/app/helpers/formErrors.php'); ?> 
                 <form action="create.php" method="post" enctype="multipart/form-data">
                     <div>
                         <label>Title</label>
@@ -55,10 +54,10 @@
                         <?php endif; ?>                      
                     </div>
                     <div>
-                        <button type="submit" name="add-post" class="btn btn-big">Add Post</button>
+                        <button type="submit" name="add-post" class="btn btn-big">Share</button>
                     </div>
                 </form>
             </div>
         </header>
     </div>
-<?php include('../../' . APPROOT . '/app/includes/dashboardEnd.php'); ?>
+<?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>
