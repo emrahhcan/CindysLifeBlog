@@ -22,7 +22,7 @@
                         <?php foreach($adminUsers as $key => $user): ?>
                         <tr>
                             <td><?php echo $key + 1; ?></td>
-                            <td><?php echo $user['username']; ?></td>
+                            <td><?php echo ucfirst($user['username']); ?></td>
                             <td>
                                 <?php
                                     if($user['admin'] === 1) {
