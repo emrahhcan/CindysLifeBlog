@@ -1,6 +1,7 @@
 <?php
     function userValidation($user) {
-        $existingUser = selectOne('users', ['email' => $user['email']]);
+        // If something does not run, use the variable $existingUser
+        $existUser = selectOne('users', ['email' => $user['email']]);
         
         $nameValidation = "/^[a-zA-Z0-9]*$/";
         $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
@@ -15,8 +16,15 @@
 
         if(empty($user['email'])) {
             array_push($errors, 'Email is required!');
-        } elseif($existingUser) {
-            array_push($errors, 'Email is already exist!');
+        }
+        if($existUser) {
+            if(isset($user['update-user']) && $existUser['id'] != $user['id']) {
+                array_push($errors, 'This email is already exist!');
+            }
+
+            if(isset($user['create-user'])) {
+                array_push($errors, 'This email is already exist!');
+            }
         }
 
         if(empty($user['password'])) {

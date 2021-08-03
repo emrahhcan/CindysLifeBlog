@@ -17,7 +17,13 @@
         $existPost = selectOne('posts', ['title' => $post['title']]);
 
         if($existPost) {
-            array_push($errors, 'Post with this title is already exist!');
+            if(isset($post['update-post']) && $existPost['id'] != $post['id']) {
+                array_push($errors, 'Post with this title is already exist!');
+            }
+
+            if(isset($post['add-post'])) {
+                array_push($errors, 'Post with this title is already exist!');
+            }
         }
 
         return $errors;

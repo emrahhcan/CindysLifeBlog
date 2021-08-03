@@ -16,11 +16,12 @@
     $confirmPassword = '';
     $admin = '';
 
-    if(isset($_POST['register-btn']) || isset($_POST['create-admin'])) {
+    // If something does not run, use the variable $create-admin
+    if(isset($_POST['register-btn']) || isset($_POST['create-user'])) {
         $errors = userValidation($_POST);
 
         if(count($errors) === 0) {
-            unset($_POST['register-btn'], $_POST['confirmPassword'], $_POST['create-admin']);
+            unset($_POST['register-btn'], $_POST['confirmPassword'], $_POST['create-user']);
             $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
             if(isset($_POST['admin'])) {
