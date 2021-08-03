@@ -31,9 +31,9 @@
                             <option value="">Choose a Tag</option>
                             <?php foreach($tags as $key => $tag): ?>
                                 <?php if(!empty($tag_id) && $tag_id == $tag['id']): ?>
-                                    <option selected value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
+                                    <option selected value="<?php echo $tag['id']; ?>"><?php echo ucwords($tag['name']); ?></option>
                                 <?php else: ?>
-                                    <option value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
+                                    <option value="<?php echo $tag['id']; ?>"><?php echo ucwords($tag['name']); ?></option>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </select>

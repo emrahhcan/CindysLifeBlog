@@ -24,7 +24,7 @@
                                     <?php echo $key + 1; ?>
                                 </td>
                                 <td>
-                                    <?php echo $tag['name']; ?>
+                                    <?php echo ucwords($tag['name']); ?>
                                 </td>
                                 <td>
                                     <a href="update.php?id=<?php echo $tag['id']; ?>" class="update">Update</a>
