@@ -4,11 +4,22 @@
     include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
+        <!-- Dashboard Navigation -->
         <?php include(APPROOT . '/app/includes/dashboardNav.php'); ?>
+        <!-- Dashboard Navigation End -->
+        <!--  -->
+        <!-- Dashboard Container -->
         <header class="dashboard-container">
+            <!-- Dashboard Menu -->
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
+            <!-- Dashboard Menu End -->
+            <!--  -->
+            <!-- Dashboard Content -->
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/users/index.php' ?>"><button class="all-posts">Manage Users</button></a>
+                <h2>Update Users</h2>
+                <a href="<?php echo URLROOT . '/admin/users/index.php' ?>">
+                    <button class="all-posts">Manage Users</button>
+                </a>
                 <?php include(APPROOT . '/app/helpers/formErrors.php'); ?>
                 <form action="update.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -46,6 +57,8 @@
                     </div>
                 </form>
             </div>
+        <!-- Dashboard Content End -->
         </header>
+        <!-- Dashboard Container End -->
     </div>
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

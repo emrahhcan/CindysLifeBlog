@@ -4,11 +4,22 @@
     include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
+        <!-- Dashboard Navigation -->
         <?php include(APPROOT . '/app/includes/dashboardNav.php'); ?>
+        <!-- Dashboard Navigation End -->
+        <!--  -->
+        <!-- Dashboard Container -->
         <header class="dashboard-container">
+            <!-- Dashboard Menu -->
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
+            <!-- Dashboard Menu End -->
+            <!--  -->
+            <!-- Dashboard Content -->
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/tags/create.php' ?>"><button class="all-posts">Add a New Tag</button></a>
+                <h2>Manage Tags</h2>
+                <a href="<?php echo URLROOT . '/admin/tags/create.php' ?>">
+                    <button class="all-posts">Add a New Tag</button>
+                </a>
                 <?php include(APPROOT . '/app/includes/messages.php'); ?>
                 <table>
                     <thead>
@@ -17,7 +28,6 @@
                         <th colspan="2">Action</th>
                     </thead>
                     <tbody>
-
                         <?php foreach($tags as $key => $tag): ?>
                             <tr>
                                 <td>
@@ -35,6 +45,8 @@
                     </tbody>
                 </table>
             </div>
+            <!-- Dashboard Content End -->
         </header>
+        <!-- Dashboard Container End -->
     </div>
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

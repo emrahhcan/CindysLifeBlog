@@ -8,7 +8,11 @@
         <header class="dashboard-container">
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/posts/index.php' ?>"><button class="all-posts">Manage Posts</button></a>
+                <h2>Update Posts</h2>
+                <a href="<?php echo URLROOT . '/admin/posts/index.php' ?>">
+                    <button class="all-posts">Manage Posts</button>
+                </a>
+                <?php include(APPROOT . '/app/helpers/formErrors.php'); ?>
                 <form action="update.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div>

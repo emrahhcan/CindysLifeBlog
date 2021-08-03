@@ -4,11 +4,22 @@
     include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
+        <!-- Dashboard Navigation -->
         <?php include(APPROOT . '/app/includes/dashboardNav.php'); ?>
+        <!-- Dashboard Navigation End -->
+        <!--  -->
+        <!-- Dashboard Container -->
         <header class="dashboard-container">
+            <!-- Dashboard Menu -->
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
+            <!-- Dashboard Menu End -->
+            <!--  -->
+            <!-- Dashboard Content -->
             <div class="dashboard-content">
-                <a href="<?php echo URLROOT . '/admin/users/create.php' ?>"><button class="all-posts">Add a New User</button></a>
+                <h2>Manage Users</h2>
+                <a href="<?php echo URLROOT . '/admin/users/create.php' ?>">
+                    <button class="all-posts">Add a New User</button>
+                </a>
                 <?php include(APPROOT . '/app/includes/messages.php'); ?>
                 <table>
                     <thead>
@@ -41,7 +52,8 @@
                     </tbody>
                 </table>
             </div>
+            <!-- Dashboard Content End -->
         </header>
-
+        <!-- Dashboard Container End -->
     </div>
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>
