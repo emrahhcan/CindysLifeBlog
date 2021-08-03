@@ -9,6 +9,7 @@
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/users/index.php' ?>"><button class="all-posts">Manage Users</button></a>
+                <?php include(APPROOT . '/app/helpers/formErrors.php'); ?>
                 <form action="create.php" method="post">
                     <div>
                         <label>Username</label>

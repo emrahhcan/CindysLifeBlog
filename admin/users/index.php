@@ -14,24 +14,30 @@
                     <thead>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Authorization</th>
+                        <th>Role</th>
+                        <th>Email</th>
                         <th colspan="2">Action</th>
                     </thead>
                     <tbody>
+                        <?php foreach($adminUsers as $key => $user): ?>
                         <tr>
-                            <td>1</td>
-                            <td>Cindy</td>
-                            <td>Admin</td>
+                            <td><?php echo $key + 1; ?></td>
+                            <td><?php echo $user['username']; ?></td>
+                            <td>
+                                <?php
+                                    if($user['admin'] === 1) {
+                                        echo 'Admin';
+                                    }
+                                    else {
+                                        echo 'Member';
+                                    }
+                                ?>
+                            </td>
+                            <td><?php echo $user['email']; ?></td>
                             <td><a href="#" class="update">Update</a></td>
-                            <td><a href="#" class="delete">Delete</a></td>
+                            <td><a href="index.php?delete_id=<?php echo $user['id']; ?>" class="delete">Delete</a></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Emrah</td>
-                            <td>Member</td>
-                            <td><a href="#" class="update">Update</a></td>
-                            <td><a href="#" class="delete">Delete</a></td>
-                        </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

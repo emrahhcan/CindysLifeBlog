@@ -3,6 +3,10 @@
     include(APPROOT . '/app/helpers/userValidation.php');
     include(APPROOT . '/app/helpers/sessionHelper.php');
 
+    $table = 'users';
+
+    $adminUsers = selectAll($table);
+
     $errors = array();
     $username = '';
     $email = '';
@@ -56,4 +60,14 @@
 
         $username = $_POST['username'];
         $password = $_POST['password'];
+    }
+
+    if(isset($_GET['delete_id'])) {
+        $count = delete($table, $_GET['delete_id']);
+
+        $_SESSION['message'] = 'User has been deleted succesfully';
+        $_SESSION['type'] = 'success';
+
+        header('location: ' . URLROOT . '/admin/users/index.php');
+        exit();
     }
