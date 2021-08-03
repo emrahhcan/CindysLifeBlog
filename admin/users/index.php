@@ -34,7 +34,7 @@
                                 ?>
                             </td>
                             <td><?php echo $user['email']; ?></td>
-                            <td><a href="#" class="update">Update</a></td>
+                            <td><a href="update.php?id=<?php echo $user['id']; ?>" class="update">Update</a></td>
                             <td><a href="index.php?delete_id=<?php echo $user['id']; ?>" class="delete">Delete</a></td>
                         </tr>
                         <?php endforeach; ?>

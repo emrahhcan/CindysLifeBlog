@@ -1,6 +1,6 @@
 <?php
     include('../../path.php');
-    include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/controllers/users.php');
     include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">
@@ -9,33 +9,40 @@
             <?php include(APPROOT . '/app/includes/dashboardMenu.php'); ?>
             <div class="dashboard-content">
                 <a href="<?php echo URLROOT . '/admin/users/index.php' ?>"><button class="all-posts">Manage Users</button></a>
+                <?php include(APPROOT . '/app/helpers/formErrors.php'); ?>
                 <form action="update.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div>
                         <label>Username</label>
-                        <input type="text" name="username" class="text-input">
+                        <input type="text" name="username" value="<?php echo $username; ?>" class="text-input">
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="email" name="email" class="text-input">
+                        <input type="email" name="email" value="<?php echo $email; ?>" class="text-input">
                     </div>
                     <div>
                         <label>Password</label>
-                        <input type="password" name="password" class="text-input">
+                        <input type="password" name="password" value="<?php echo $password; ?>" class="text-input">
                     </div>
                     <div>
                         <label>Password Confirmation</label>
-                        <input type="password" name="passwordConf" class="text-input">
+                        <input type="password" name="confirmPassword" value="<?php echo $confirmPassword; ?>" class="text-input">
                     </div>
                     <div>
-                        <label>Authorization</label>
-                        <select name="role" class="text-input">
-                            <option value="Author">Member</option>
-                            <option value="Admin">Admin</option>
-                        </select>
+                        <?php if(isset($admin) && ($admin === 1)): ?>
+                            <label>
+                                <input checked type="checkbox" name="admin">
+                                <span style="color: maroon;">Admin</span>
+                            </label>
+                        <?php else: ?>
+                            <label>
+                                <input type="checkbox" name="admin">
+                                <span style="color: maroon;">Admin</span>
+                            </label>
+                        <?php endif; ?>
                     </div>
-
                     <div>
-                        <button type="submit" class="btn btn-big">Update User Info</button>
+                        <button type="submit" name="update-user" class="btn btn-big">Update User Info</button>
                     </div>
                 </form>
             </div>
