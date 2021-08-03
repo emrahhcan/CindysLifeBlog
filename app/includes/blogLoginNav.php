@@ -1,12 +1,12 @@
 <nav class="navbar">
-    <div class="toggle-menu">
+    <div class="toggle-menu blog-logo">
         <a href="<?php echo URLROOT; ?>/index.php" class="logo">Cindy's Life</a>
         <button class="nav-toggle">
             <i class="fas fa-bars"></i>
         </button> 
     </div>
     <div class="navigation">
-        <ul class="links">
+        <ul class="links blog-navbar">
             <a href="<?php echo URLROOT; ?>/index.php">
                 <li>Home</li>
             </a>
