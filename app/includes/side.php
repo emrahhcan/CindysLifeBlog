@@ -19,7 +19,7 @@
                         <?php foreach($tags as $key => $tag): ?>
                             <li>
                                 <a href="#!">
-                                    <?php echo $tag['name']; ?>
+                                    <?php echo ucwords($tag['name']); ?>
                                 </a>
                             </li>
                         <?php endforeach; ?>

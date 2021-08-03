@@ -8,7 +8,7 @@
         header('location: ' . URLROOT . '/blog.php');
 
         if($_SESSION['admin']) {
-            header('location: ' . URLROOT . '/index.php');
+            header('location: ' . URLROOT . '/admin/dashboard.php');
         } else {
             header('location: ' . URLROOT . '/blog.php');
         }
