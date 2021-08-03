@@ -8,11 +8,12 @@
     $adminUsers = selectAll($table);
 
     $errors = array();
+
     $username = '';
     $email = '';
     $password = '';
     $confirmPassword = '';
-    $table = 'users';
+    $admin = '';
 
     if(isset($_POST['register-btn']) || isset($_POST['create-admin'])) {
         $errors = userValidation($_POST);
@@ -42,6 +43,7 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             $confirmPassword = $_POST['confirmPassword'];
+            $admin = isset($_POST['admin']) ? 1 : 0;
         }
     }
 
