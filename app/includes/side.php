@@ -23,7 +23,7 @@
                     <ul class="list-unstyled mb-0">
                         <?php foreach($tags as $key => $tag): ?>
                             <li>
-                                <a href="#!" class="blogTags">
+                                <a href="<?php echo URLROOT . '/blog.php?t_id=' . $tag['id'] . '&name=' . $tag['name']; ?>" class="blogTags">
                                     <?php echo ucwords($tag['name']); ?>
                                 </a>
                             </li>

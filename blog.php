@@ -5,7 +5,10 @@
     $posts = array();
     $blogPageTitle = 'Recent Articles';
 
-    if(isset($_POST['search-term'])) {
+    if(isset($_GET['t_id'])) {
+        $posts = getPostsByTagID($_GET['t_id']);
+        $blogPageTitle = 'You are looking under ' . '"' . lcfirst($_GET['name']) . '"' . ' tag';
+    } else if(isset($_POST['search-term'])) {
         $blogPageTitle = 'You are looking for ' . '"' . $_POST['search-term'] . '"';
         $posts = searchPosts($_POST['search-term']);
     } else {
@@ -22,7 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <title>Cindy's Life</title>
+    <title>Cindy's Life - Blog</title>
 </head>
 <body>
     <div class="container-self">
@@ -51,18 +54,20 @@
                     <!-- Featured blog post-->
                     <?php foreach($posts as $post): ?>
                         <div class="card mb-4">
-                            <a href="#!"><img class="card-img-top" src="<?php echo URLROOT . '/assets/img/postImages/' . $post['image']; ?>" alt="..." /></a>
+                            <a href="article.php?id=<?php echo $post['id']; ?>"><img class="card-img-top" src="<?php echo URLROOT . '/assets/img/postImages/' . $post['image']; ?>" alt="<?php echo $post['image'] ?>" /></a>
                             <div class="card-body">
                                 <div class="small text-muted">
-                                    <?php echo date('F j, Y', strtotime($post['created_at'])); ?> 
-                                    by
+                                    <span>Created at </span>
+                                    <?php echo date('Y F j', strtotime($post['created_at'])); ?>
+                                    <span> by </span>
                                     <?php echo ucwords($post['username']); ?>
+                                    <br>
                                 </div>
-                                <h2 class="card-title"><?php echo $post['title']; ?></h2>
+                                <h2 class="card-title"><?php echo ucwords($post['title']); ?></h2>
                                 <p class="card-text">
                                     <?php echo html_entity_decode(substr($post['body'], 0, 250) . '...'); ?>
                                 </p>
-                                <a class="btn btn-primary" href="#!">Read More</a>
+                                <a class="btn btn-primary" href="article.php?id=<?php echo $post['id']; ?>">Read More</a>
                             </div>
                         </div>
                     <?php endforeach; ?>

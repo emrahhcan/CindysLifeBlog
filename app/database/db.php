@@ -159,3 +159,18 @@
 
         return $records;
     }
+
+    function getPostsByTagID($tag_id) {
+        global $conn;
+
+        $sql = "SELECT p.*, u.username 
+                FROM posts AS p 
+                JOIN users AS u 
+                ON p.user_id=u.id 
+                WHERE p.published=? AND tag_id=?";
+
+        $stmt = executeQuery($sql, ['published' => 1, 'tag_id' => $tag_id]);
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        return $records;
+    }
