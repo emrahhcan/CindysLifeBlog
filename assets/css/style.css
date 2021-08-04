@@ -313,7 +313,7 @@ body {
     align-content: center;
     text-align: center;
     padding: 7rem 6rem;
-    background: linear-gradient(to bottom, var(--light-primary), var(--pink));
+    background: var(--pink);
 }
 .about-me {
     font-size: 1.5rem; 
@@ -723,4 +723,20 @@ td {
     top: 40%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+.mainTextColor {
+    color: var(--secondary);
+}
+.secondaryTextColor {
+    color: var(--pink);
+}
+.blogTags {
+    color: var(--pink);
+    text-decoration: none;
+}
+.blogTags:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+    transition: var(--transition);
+    margin-left: 10px;
 }
