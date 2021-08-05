@@ -12,6 +12,8 @@
     $tags = selectAll($table);
 
     if(isset($_POST['add-tag'])) {
+        adminOnly();
+
         $errors = tagValidation($_POST);
 
         if(count($errors) === 0) {
@@ -30,6 +32,8 @@
     }
 
     if(isset($_POST['update-tag'])) {
+        adminOnly();
+        
         $errors = tagValidation($_POST);
 
         if(count($errors) === 0) {
@@ -59,6 +63,8 @@
     }
 
     if(isset($_GET['del_id'])) {
+        adminOnly();
+
         $id = $_GET['del_id'];
         $count = delete($table, $id);
 

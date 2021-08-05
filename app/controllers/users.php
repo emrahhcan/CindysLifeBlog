@@ -67,6 +67,8 @@
     }
 
     if(isset($_POST['update-user'])) {
+        adminOnly();
+
         $errors = userValidation($_POST);
 
         if(count($errors) === 0) {
@@ -102,6 +104,8 @@
     }
 
     if(isset($_GET['delete_id'])) {
+        adminOnly();
+        
         $count = delete($table, $_GET['delete_id']);
 
         $_SESSION['message'] = 'User has been deleted succesfully';

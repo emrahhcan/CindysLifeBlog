@@ -1,6 +1,9 @@
 <?php
     include('../../path.php');
     include(APPROOT . '/app/controllers/tags.php');
+
+    adminOnly();
+
     include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">

@@ -1,6 +1,9 @@
 <?php 
     include('path.php');
     include(APPROOT . '/app/controllers/users.php');
+
+    guestsOnly();
+
     include(APPROOT . '/app/includes/head.php'); 
 ?>
     <div class="container-self">

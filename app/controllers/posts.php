@@ -26,6 +26,8 @@
     }
     
     if(isset($_GET['delete_id'])) {
+        adminOnly();
+
         $count = delete($table, $_GET['delete_id']);
 
         $_SESSION['message'] = 'Post has been deleted successfully';
@@ -36,6 +38,8 @@
     }
 
     if(isset($_GET['published']) && isset($_GET['p_id'])) {
+        adminOnly();
+
         $published = $_GET['published'];
         $p_id = $_GET['p_id'];
 
@@ -49,6 +53,8 @@
     }
 
     if(isset($_POST['add-post'])) {
+        adminOnly();
+
         $errors = postValidation($_POST);
 
         if(!empty($_FILES['image']['name'])) {
@@ -89,6 +95,8 @@
     }
 
     if(isset($_POST['update-post'])) {
+        adminOnly();
+        
         $errors = postValidation($_POST);
 
         if(!empty($_FILES['image']['name'])) {
