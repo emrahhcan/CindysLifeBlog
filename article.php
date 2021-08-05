@@ -1,13 +1,11 @@
 <?php 
     include('path.php');
     include(APPROOT . '/app/controllers/posts.php');
-    
-    $posts = array();
 
     if(isset($_GET['id'])) {
         $post = selectOne('posts', ['id' => $_GET['id']]);
     }
-
+    
     $tags = selectAll('tags');
 
     $pageTitle = "Cindy's Life" . ' - ' . ucwords($post['title']);
@@ -28,11 +26,7 @@
                             <div class="text-muted fst-italic mb-2">
                                 <span>Created at </span>
                                 <?php echo date('Y F j', strtotime($post['created_at'])); ?>
-                                <span> by </span>
-                                <?php // echo ucwords($post['username']); ?>
                             </div>
-                            <!-- Post categories-->
-                            <a class="badge bg-secondary text-decoration-none link-light" href="#!"></a>
                         </header>
                         <!-- Preview image figure-->
                         <figure class="mb-4"><img class="img-fluid rounded" src="<?php echo URLROOT . '/assets/img/postImages/' . $post['image']; ?>" alt="<?php echo $post['image'] ?>" /></figure>
