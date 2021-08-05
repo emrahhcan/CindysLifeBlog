@@ -1,5 +1,6 @@
 <?php
     include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/helpers/middleware.php');
     include(APPROOT . '/app/helpers/tagValidation.php');
 
     $table = 'tags';

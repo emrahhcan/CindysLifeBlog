@@ -1,5 +1,6 @@
 <?php
     include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/helpers/middleware.php');
     include(APPROOT . '/app/helpers/userValidation.php');
     include(APPROOT . '/app/helpers/sessionHelper.php');
 
@@ -100,7 +101,7 @@
         $id = $user['id'];
         $username = $user['username'];
         $email = $user['email'];
-        $admin = isset($user['admin']) ? 1 : 0;
+        $admin = $user['admin'];
     }
 
     if(isset($_GET['delete_id'])) {
