@@ -4,7 +4,8 @@
 
     guestsOnly();
 
-    include(APPROOT . '/app/includes/head.php'); 
+    $pageTitle = "Cindy's Life - Register";
+    include(APPROOT . '/app/includes/head.php');
 ?>
     <div class="container-self">
         <?php include(APPROOT . '/app/includes/blogLoginNav.php'); ?>

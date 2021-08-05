@@ -4,6 +4,7 @@
 
     guestsOnly();
 
+    $pageTitle = "Cindy's Life - Login";
     include(APPROOT . '/app/includes/head.php'); 
 ?>
     <div class="container-self">

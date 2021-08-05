@@ -1,6 +1,8 @@
 <?php 
     include('path.php');
     include(APPROOT . '/app/database/db.php');
+
+    $pageTitle = "Cindy's Life";
     include(APPROOT . '/app/includes/head.php'); 
 ?>
 <div class="container-self">

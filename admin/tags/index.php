@@ -4,6 +4,7 @@
 
     adminOnly();
 
+    $pageTitle = "Cindy's Life - Tags";
     include(APPROOT . '/app/includes/dashboardHead.php');
 ?>
     <div class="container-self">

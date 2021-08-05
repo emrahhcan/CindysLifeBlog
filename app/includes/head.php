@@ -7,6 +7,6 @@
     <link href="<?php echo URLROOT; ?>/assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <title>Cindy's Life</title>
+    <title><?php echo $pageTitle; ?></title>
 </head>
 <body>
