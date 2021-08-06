@@ -2,6 +2,8 @@
     include('../../path.php');
     include(APPROOT . '/app/controllers/posts.php');
 
+    $posts = getUsername();
+
     adminOnly();
 
     $pageTitle = "Cindy's Life - Posts";
@@ -35,15 +37,21 @@
                     <tbody>
                         <?php foreach($posts as $key => $post): ?>
                             <tr>
-                                <td>
+                                <td data-label="ID:">
                                     <?php echo $key + 1; ?>
                                 </td>
-                                <td>
+                                <td data-label="Title:">
                                     <?php echo ucwords($post['title']); ?>
                                 </td>
-                                <td>Emrah</td>
-                                <td><a href="update.php?id=<?php echo $post['id']; ?>" class="update">Update</a></td>
-                                <td><a href="update.php?delete_id=<?php echo $post['id']; ?>" class="delete">Delete</a></td>
+                                <td data-label="Author:">
+                                    <?php echo ucfirst($post['username']); ?>
+                                </td>
+                                <td data-label="Action:">
+                                    <a href="update.php?id=<?php echo $post['id']; ?>" class="update">Update</a>
+                                </td>
+                                <td>
+                                    <a href="update.php?delete_id=<?php echo $post['id']; ?>" class="delete">Delete</a>
+                                </td>
                                 <?php if($post['published']): ?>
                                     <td>
                                         <a href="update.php?published=0&p_id=<?php echo $post['id']; ?>" class="unpublish">Draft</a>

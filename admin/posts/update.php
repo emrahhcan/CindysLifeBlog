@@ -33,9 +33,7 @@
                     </div>
                     <div>
                         <label>Body</label>
-                        <textarea name="body" id="body">
-                            <?php echo $body; ?>
-                        </textarea>
+                        <textarea name="body" id="body"><?php echo $body; ?></textarea>
                     </div>
                     <div>
                         <label>Image</label>
@@ -63,4 +61,6 @@
         </header>
         <!-- Dashboard Container End -->
     </div>
+    <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script>CKEDITOR.replace('body')</script>
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

@@ -33,9 +33,7 @@
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea name="description" id="body">
-                            <?php echo $description; ?>
-                        </textarea>
+                        <textarea name="description" id="body"><?php echo $description; ?></textarea>
                     </div>
 
                     <div>

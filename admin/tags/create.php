@@ -25,18 +25,19 @@
                     <button class="all-posts">Manage Tags</button>
                 </a>
                 <?php include(APPROOT . '/app/helpers/formErrors.php'); ?>
-                <form action="create.php" method="post">
+                <form action="create.php" method="post" enctype="multipart/form-data">
                     <div>
                         <label>Name</label>
                         <input type="text" name="name" value="<?php echo $name; ?>" class="text-input">
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea name="description" id="body">
-                            <?php echo $description; ?>
-                        </textarea>
+                        <textarea name="description" id="body"><?php echo $description; ?></textarea>
                     </div>
-
+                    <div>
+                        <label>Image</label>
+                        <input type="file" name="image" class="text-input">
+                    </div>
                     <div>
                         <button type="submit" name="add-tag" class="btn btn-big">Add Tag</button>
                     </div>

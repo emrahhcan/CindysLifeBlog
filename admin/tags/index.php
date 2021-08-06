@@ -34,13 +34,13 @@
                     <tbody>
                         <?php foreach($tags as $key => $tag): ?>
                             <tr>
-                                <td>
+                                <td data-label="ID:">
                                     <?php echo $key + 1; ?>
                                 </td>
-                                <td>
+                                <td data-label="Name">
                                     <?php echo ucwords($tag['name']); ?>
                                 </td>
-                                <td>
+                                <td data-label="Action:">
                                     <a href="update.php?id=<?php echo $tag['id']; ?>" class="update">Update</a>
                                 </td>
                                 <td><a href="index.php?del_id=<?php echo $tag['id']; ?>" class="delete">Delete</a></td>

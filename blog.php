@@ -51,7 +51,7 @@
                                     <?php echo date('Y F j', strtotime($post['created_at'])); ?>
                                     <span> by </span>
                                     <?php echo ucwords($post['username']); ?>
-                                    <br>
+                                    <p></p>
                                 </div>
                                 <h2 class="card-title"><?php echo ucwords($post['title']); ?></h2>
                                 <p class="card-text">
@@ -66,7 +66,6 @@
                 <?php include(APPROOT . '/app/includes/side.php'); ?>
             </div>
         </div>
-
         <?php include(APPROOT . '/app/includes/footer.php'); ?>
     </div>
 <?php include(APPROOT . '/app/includes/end.php'); ?>

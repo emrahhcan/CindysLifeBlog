@@ -142,6 +142,23 @@
         return $records;
     }
 
+    function getUsername() {
+        
+        
+        global $conn;
+        
+        $sql = "SELECT p.*, u.username 
+                FROM posts AS p 
+                JOIN users AS u 
+                ON p.user_id=u.id
+                WHERE u.admin=?";
+        
+        $stmt = executeQuery($sql, ['admin' => 1]);
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        return $records;
+    }
+
     function searchPosts($term) {
         $match = '%' . $term . '%';
 
@@ -152,7 +169,8 @@
                 JOIN users AS u 
                 ON p.user_id=u.id WHERE p.published=?
                 AND p.title LIKE ? 
-                OR p.body LIKE ?";
+                OR p.body LIKE ?
+                ORDER BY p.created_at DESC";
 
         $stmt = executeQuery($sql, ['published' => 1, 'title' => $match, 'body' => $match]);
         $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -167,7 +185,8 @@
                 FROM posts AS p 
                 JOIN users AS u 
                 ON p.user_id=u.id 
-                WHERE p.published=? AND tag_id=?";
+                WHERE p.published=? AND tag_id=?
+                ORDER BY p.created_at DESC";
 
         $stmt = executeQuery($sql, ['published' => 1, 'tag_id' => $tag_id]);
         $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);

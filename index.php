@@ -1,6 +1,6 @@
 <?php 
     include('path.php');
-    include(APPROOT . '/app/database/db.php');
+    include(APPROOT . '/app/controllers/tags.php');
 
     $pageTitle = "Cindy's Life";
     include(APPROOT . '/app/includes/head.php'); 
@@ -25,42 +25,14 @@
         </div>
         <?php include(APPROOT . '/app/includes/secondaryDivider.php'); ?>
         <div class="tags-content">
-            <div class="img-wrapper">
-                <span class="overlay">
-                    <p>Content</p>  
-                </span>
-                <img class="tag-images" src="assets/img/tags/cabin.png" alt="" />
-            </div>
-            <div class="img-wrapper">
-                <span class="overlay">
-                    <p>Content</p>
-                </span>
-                <img class="tag-images" src="assets/img/tags/cake.png" alt="" />
-            </div>
-            <div class="img-wrapper">
-                <span class="overlay">
-                    <p>Content</p>
-                </span>
-                <img class="tag-images" src="assets/img/tags/game.png" alt="" />
-            </div>
-            <div class="img-wrapper">
-                <span class="overlay">
-                    <p>Content</p>
-                </span>
-                <img class="tag-images" src="assets/img/tags/submarine.png" alt="" />
-            </div>
-            <div class="img-wrapper">
-                <span class="overlay">
-                    <p>Content</p>
-                </span>
-                <img class="tag-images" src="assets/img/tags/circus.png" alt="" />
-            </div>
-            <div class="img-wrapper">
-                <span class="overlay">
-                    <p>Content</p>
-                </span>
-                <img class="tag-images" src="assets/img/tags/safe.png" alt="" />
-            </div>
+            <?php foreach($tags as $tag): ?>
+                <div class="img-wrapper">
+                    <span class="overlay">
+                        <p><?php echo ucwords($tag['name']); ?></p>  
+                    </span>
+                    <img class="tag-images" src="<?php echo URLROOT . '/assets/img/tagImages/' . $tag['image']; ?>" alt="<?php echo $tag['image'] ?>" />
+                </div>
+            <?php endforeach; ?>
         </div>
     </section>
     <section class="about-container" id="about">
@@ -108,6 +80,7 @@
             </form>
         </div>
     </section>
+    <script src="<?php echo URLROOT . '/assets/javascript/modalWindow.js'; ?>"></script>
     <?php include(APPROOT . '/app/includes/footer.php'); ?>
 </div>
 <?php include(APPROOT . '/app/includes/end.php'); ?>

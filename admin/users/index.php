@@ -36,9 +36,9 @@
                     <tbody>
                         <?php foreach($adminUsers as $key => $user): ?>
                         <tr>
-                            <td><?php echo $key + 1; ?></td>
-                            <td><?php echo ucfirst($user['username']); ?></td>
-                            <td>
+                            <td data-label="ID:"><?php echo $key + 1; ?></td>
+                            <td data-label="Name:"><?php echo ucfirst($user['username']); ?></td>
+                            <td data-label="Authorization:">
                                 <?php
                                     if($user['admin'] === 1) {
                                         echo 'Admin';
@@ -48,8 +48,8 @@
                                     }
                                 ?>
                             </td>
-                            <td><?php echo $user['email']; ?></td>
-                            <td><a href="update.php?id=<?php echo $user['id']; ?>" class="update">Update</a></td>
+                            <td data-label="Email:"><?php echo $user['email']; ?></td>
+                            <td data-label="Action:"><a href="update.php?id=<?php echo $user['id']; ?>" class="update">Update</a></td>
                             <td><a href="index.php?delete_id=<?php echo $user['id']; ?>" class="delete">Delete</a></td>
                         </tr>
                         <?php endforeach; ?>

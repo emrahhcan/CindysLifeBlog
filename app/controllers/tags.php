@@ -17,6 +17,21 @@
 
         $errors = tagValidation($_POST);
 
+        if(!empty($_FILES['image']['name'])) {
+            $image_name = time() . '_' . $_FILES['image']['name'];
+            $destination = '../../assets/img/tagImages/' . $image_name;
+
+            $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+
+            if($result) {
+                $_POST['image'] = $image_name;
+            } else {
+                array_push($errors, 'An error occurs');
+            }
+        } else {
+            array_push($errors, 'Tag image is required!');
+        }
+
         if(count($errors) === 0) {
             unset($_POST['add-tag']);
 
@@ -36,6 +51,21 @@
         adminOnly();
         
         $errors = tagValidation($_POST);
+
+        if(!empty($_FILES['image']['name'])) {
+            $image_name = time() . '_' . $_FILES['image']['name'];
+            $destination = '../../assets/img/tagImages/' . $image_name;
+
+            $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+
+            if($result) {
+                $_POST['image'] = $image_name;
+            } else {
+                array_push($errors, 'An error occurs');
+            }
+        } else {
+            array_push($errors, 'Tag image is required!');
+        }
 
         if(count($errors) === 0) {
             $id = $_POST['id'];
