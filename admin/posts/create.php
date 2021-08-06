@@ -32,7 +32,7 @@
                     </div>
                     <div>
                         <label>Body</label>
-                        <textarea name="body" id="body"><?php echo $body; ?></textarea>
+                        <textarea name="body" id="body" class="form-control ckeditor"><?php echo $body; ?></textarea>
                     </div>
                     <div>
                         <label>Image</label>
@@ -76,5 +76,11 @@
         <!-- Dashboard Container End -->
     </div>
     <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
-    <script>CKEDITOR.replace('body')</script>
+    <script>
+        CKEDITOR.replace('body', {
+            height: 300,
+            filebrowserUploadUrl: "upload.php",
+            filebrowserUploadMethod: "form"
+        })
+    </script>
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

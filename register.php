@@ -39,4 +39,4 @@
         <?php include(APPROOT . '/app/includes/footer.php'); ?>
     </div>
 <script src="<?php echo URLROOT . '/assets/javascript/showPassword.js' ?>"></script>
-<?php include(APPROOT . '/app/includes/end.php'); ?>
+<?php include(APPROOT . '/app/includes/blogEnd.php'); ?>

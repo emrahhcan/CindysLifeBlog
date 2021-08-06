@@ -60,7 +60,7 @@
     </section>
     <section class="contact-container" id="contact">
         <div class="tags-header">
-            <h1>Contact Me</h1>
+            <h1>Contact</h1>
         </div>
         <?php include(APPROOT . '/app/includes/secondaryDivider.php'); ?>
         <div class="contact-content">

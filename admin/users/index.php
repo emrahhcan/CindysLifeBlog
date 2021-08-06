@@ -38,7 +38,7 @@
                         <tr>
                             <td data-label="ID:"><?php echo $key + 1; ?></td>
                             <td data-label="Name:"><?php echo ucfirst($user['username']); ?></td>
-                            <td data-label="Authorization:">
+                            <td data-label="Role:">
                                 <?php
                                     if($user['admin'] === 1) {
                                         echo 'Admin';

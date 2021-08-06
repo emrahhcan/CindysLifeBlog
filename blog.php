@@ -68,4 +68,4 @@
         </div>
         <?php include(APPROOT . '/app/includes/footer.php'); ?>
     </div>
-<?php include(APPROOT . '/app/includes/end.php'); ?>
+<?php include(APPROOT . '/app/includes/blogEnd.php'); ?>

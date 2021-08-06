@@ -45,9 +45,9 @@
                             <option value="">Choose a Tag</option>
                             <?php foreach($tags as $key => $tag): ?>
                                 <?php if(!empty($tag_id) && $tag_id == $tag['id']): ?>
-                                    <option selected value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
+                                    <option selected value="<?php echo $tag['id']; ?>"><?php echo ucwords($tag['name']); ?></option>
                                 <?php else: ?>
-                                    <option value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
+                                    <option value="<?php echo $tag['id']; ?>"><?php echo ucwords($tag['name']); ?></option>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
@@ -62,5 +62,11 @@
         <!-- Dashboard Container End -->
     </div>
     <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
-    <script>CKEDITOR.replace('body')</script>
+    <script>
+        CKEDITOR.replace('body', {
+            height: 300,
+            filebrowserUploadUrl: "upload.php",
+            filebrowserUploadMethod: "form"
+        })
+    </script>
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>
