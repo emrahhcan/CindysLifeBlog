@@ -27,10 +27,12 @@
         <div class="tags-content">
             <?php foreach($tags as $tag): ?>
                 <div class="img-wrapper">
+                    <a href="<?php echo URLROOT . '/blog.php?t_id=' . $tag['id'] . '&name=' . $tag['name']; ?>">
                     <span class="overlay">
                         <p><?php echo ucwords($tag['name']); ?></p>  
                     </span>
                     <img class="tag-images" src="<?php echo URLROOT . '/assets/img/tagImages/' . $tag['image']; ?>" alt="<?php echo $tag['image'] ?>" />
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -80,7 +82,6 @@
             </form>
         </div>
     </section>
-    <script src="<?php echo URLROOT . '/assets/javascript/modalWindow.js'; ?>"></script>
     <?php include(APPROOT . '/app/includes/footer.php'); ?>
 </div>
 <?php include(APPROOT . '/app/includes/end.php'); ?>

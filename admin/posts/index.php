@@ -49,9 +49,6 @@
                                 <td data-label="Action:">
                                     <a href="update.php?id=<?php echo $post['id']; ?>" class="update">Update</a>
                                 </td>
-                                <td>
-                                    <a href="update.php?delete_id=<?php echo $post['id']; ?>" class="delete">Delete</a>
-                                </td>
                                 <?php if($post['published']): ?>
                                     <td>
                                         <a href="update.php?published=0&p_id=<?php echo $post['id']; ?>" class="unpublish">Draft</a>
@@ -61,6 +58,9 @@
                                         <a href="update.php?published=1&p_id=<?php echo $post['id']; ?>" class="publish">Publish</a>
                                     </td>
                                 <?php endif; ?>
+                                <td>
+                                    <button type="button" class="delete-btn">Delete</button>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -70,4 +70,19 @@
         </header>
         <!-- Dashboard Container End -->
     </div>
+    <!-- Modal Start -->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="modal-title">Delete User</h1>
+      <p class="modal-text">Do You Really Want to Delete <?php echo ucfirst($post['title']); ?>?</p>
+      <form action="index.php">
+        <button type="button" class="modal-dismiss">No</button>
+        <button type="submit" class="delete">
+            <a href="update.php?delete_id=<?php echo $post['id']; ?>">Delete</a>
+        </button>
+      </form>
+      </button>
+    </div>
+    <div class="modal-overlay hidden"></div>
+    <!-- Modal End -->
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

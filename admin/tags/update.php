@@ -35,7 +35,7 @@
                         <label>Description</label>
                         <textarea name="description" id="body"><?php echo $description; ?></textarea>
                     </div>
-
+                    
                     <div>
                         <button type="submit" name="update-tag" class="btn btn-big">Update Tag</button>
                     </div>

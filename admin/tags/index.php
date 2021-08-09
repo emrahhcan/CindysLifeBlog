@@ -43,7 +43,9 @@
                                 <td data-label="Action:">
                                     <a href="update.php?id=<?php echo $tag['id']; ?>" class="update">Update</a>
                                 </td>
-                                <td><a href="index.php?del_id=<?php echo $tag['id']; ?>" class="delete">Delete</a></td>
+                                <td>
+                                    <button type="button" class="delete-btn">Delete</button>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -53,4 +55,19 @@
         </header>
         <!-- Dashboard Container End -->
     </div>
+    <!-- Modal Start -->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="modal-title">Delete User</h1>
+      <p class="modal-text">Do You Really Want to Delete <?php echo ucfirst($tag['name']); ?>?</p>
+      <form action="index.php">
+        <button type="button" class="modal-dismiss">No</button>
+        <button type="submit" class="delete">
+            <a href="index.php?del_id=<?php echo $tag['id']; ?>">Delete</a>
+        </button>
+      </form>
+      </button>
+    </div>
+    <div class="modal-overlay hidden"></div>
+    <!-- Modal End -->
 <?php include(APPROOT . '/app/includes/dashboardEnd.php'); ?>

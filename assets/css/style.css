@@ -191,6 +191,9 @@ body {
         height: 13.4rem;
         padding: 0 !important;
     }
+    .masthead-header {
+        font-size: 1.5rem !important;
+    }
     .tags-container {
         padding: 5.2rem 1rem !important;
     }
@@ -250,6 +253,9 @@ body {
         font-size: 15px;
         font-weight: bold;
         text-align: left;
+    }
+    .modal {
+        width: 70% !important;
     }
 }
 .masthead {
@@ -656,8 +662,82 @@ td {
 .update {
     color: var(--yellow);
 }
+:is(.delete-btn, .delete) {
+    outline: none;
+    border: none;
+    background-color: var(--danger);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--white);
+    cursor: pointer;
+}
+:is(.delete-btn:hover, .delete:hover) {
+    background-color: rgb(179, 0, 0);
+}
 .delete {
-    color: red;
+    margin-left: 10px;
+}
+.delete > a {
+    text-decoration: none;
+    color: white;
+}
+.modal-dismiss {
+    outline: none;
+    border: none;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 10px 22px 10px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-dismiss:hover {
+    background-color: var(--gray-dark);
+    text-decoration: underline;
+}
+.close-modal {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 3.5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+} 
+.modal-text {
+    font-size: 1rem;
+    margin: 1rem 0 1rem 0;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: var(--secondary);
+    padding: 1rem 0 1rem 0;
+} 
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+ .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
 }
 .publish {
     color: var(--green);
