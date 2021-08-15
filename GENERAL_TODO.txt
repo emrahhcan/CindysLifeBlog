@@ -1,2 +1,0 @@
-* Make it responsive for all the pages including dashboard
-* Fix the navbar on blog page, and fix smooth scrolling problem blog to home page
