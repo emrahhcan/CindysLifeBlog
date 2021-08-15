@@ -1,2 +1,0 @@
-* Check the description updates. It cause some problem due to tag name!
-* Post update functionality will be maintained.
