@@ -1,6 +1,7 @@
 <?php 
     include('path.php');
     include(APPROOT . '/app/controllers/tags.php');
+    include(APPROOT . '/app/controllers/contactForm.php');
 
     $pageTitle = "Cindy's Life";
     include(APPROOT . '/app/includes/head.php'); 
@@ -66,18 +67,19 @@
         </div>
         <?php include(APPROOT . '/app/includes/secondaryDivider.php'); ?>
         <div class="contact-content">
-            <form>
+            <?php include(APPROOT . '/app/helpers/contactValidation.php'); ?>
+            <form action="index.php" method="post">
                 <div class="contact-name">
-                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="Name" name="name" />
                 </div>
                 <div class="contact-email">
-                    <input type="email" placeholder="Email Address" />
+                    <input type="email" placeholder="Email Address" name="email" />
                 </div>
                 <div class="contact-message">
-                    <textarea placeholder="Your Message"></textarea>
+                    <textarea placeholder="Your Message" name="message"></textarea>
                 </div>
                 <div class="contact-btn">
-                    <button>Send</button>
+                    <button type="submit" name="submit">Send</button>
                 </div>
             </form>
         </div>
