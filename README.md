@@ -5,7 +5,7 @@
 * MVC model applied.
 * App is still being developed.
 * All passwords are hashed using PHP password hashing algorithm.
-### Deployed URL Given Below
+#### Deployed URL Given Below
 [cindyslife.net](http://cindyslife.net)
 
 ## How to See on Your Local Machine?
@@ -27,7 +27,7 @@
 
 ## How to Check Admin Dashboard?
 * Firstly, you need to set yourself up as an admin. Please follow the steps given below to be able to do this.
-### How to Set Yourself Up as an Admin?
+#### How to Set Yourself Up as an Admin?
 * Click to Login on navigation menu. Then, Click to not registered yet link on that page.
 * Complete your registration. You must be logged in as a normal user after registration step.
 * Then, open the phpMyAdmin page and change the value 0 to 1 in users table in blog_system database, or you can add yourself as an admin into the sql codes (Do not forget to hash your password before you start to add).
