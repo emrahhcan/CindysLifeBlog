@@ -17,10 +17,10 @@
 
         define("APPROOT", realpath(dirname(__FILE__)));
         define("URLROOT", "http://localhost:<your_port>/cindyslife");
-        
+
 #### After all;
-* * Compress the blog_system.sql file under the assets/sql folder.
-* * Open localhost:<your_port> (if you are using)>/phpMyAdmin, then click import button, and import the compressed SQL commands.
+* Compress the blog_system.sql file under the assets/sql folder.
+* Open localhost:<your_port> (if you are using)>/phpMyAdmin, then click import button, and import the compressed SQL commands.
 #### Finally,
 * Type "localhost:<your_port>/cindyslife" in URL part of your browser.
 * Now, you are ready to go.
