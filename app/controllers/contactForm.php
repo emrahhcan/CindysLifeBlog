@@ -1,5 +1,4 @@
 <?php
-    include(APPROOT . '/app/helpers/contactValidation.php');
     $errors = array();
 
     if(isset($_POST['submit'])) {

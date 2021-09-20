@@ -436,26 +436,26 @@ body {
     height: 50rem;
     padding: 6.5rem 0 0 0;
 }
-:is(.login-container form input, .login-container form button, .contact-container form input, .contact-container form button) {
+:is(.login-container form input, .login-container form button, .contact-container form input, .contact-container form button, .create-button) {
     width: 17.5rem;
     height: 3rem;
     margin-bottom: 1rem;
     outline: none;
     font-size: 1.3rem;
 }
-:is(.login-container form input, .contact-container form input, .contact-container form textarea) {
+:is(.login-container form input, .contact-container form input, .contact-container form textarea, .create-textarea) {
     border: none;
     border-bottom: 1px solid var(--secondary);
     padding: 0.5rem;
 }
-:is(.login-container form button, .contact-container form button) {
+:is(.login-container form button, .contact-container form button, .create-button) {
     border: 1px solid var(--secondary);
     border-radius: 5px;
     background: var(--white);
     text-transform: uppercase;
     color: var(--secondary);
 }
-:is(.login-container form button:hover, .contact-container form button:hover) {
+:is(.login-container form button:hover, .contact-container form button:hover, .create-button:hover) {
     cursor: pointer;
     border: none;
     background: var(--pink);
@@ -647,6 +647,32 @@ body {
     color: var(--secondary);
     text-align: center;
     padding-bottom: 1.5rem;
+}
+.dashboard-content form div {
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.button-div {
+    display:flex;
+    align-items: center;
+}
+.create-text {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    outline: none;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--secondary);
+    padding: 0.5rem;
+}
+.create-textarea {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    outline: none;
+    font-size: 1rem;
 }
 table {
     width: 100%;
