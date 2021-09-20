@@ -28,19 +28,19 @@
                 <form action="create.php" method="post" enctype="multipart/form-data">
                     <div>
                         <label>Title</label>
-                        <input type="text" name="title" value="<?php echo $title; ?>" class="text-input">
+                        <input type="text" name="title" value="<?php echo $title; ?>" class="create-text">
                     </div>
                     <div>
                         <label>Body</label>
-                        <textarea name="body" id="body" class="form-control ckeditor"><?php echo $body; ?></textarea>
+                        <textarea name="body" id="body" class="ckeditor"><?php echo $body; ?></textarea>
                     </div>
                     <div>
                         <label>Image</label>
-                        <input type="file" name="image" class="text-input">
+                        <input type="file" name="image">
                     </div>
                     <div>
                         <label>Topic</label>
-                        <select name="tag_id" class="text-input">
+                        <select name="tag_id">
                             <option value="">Choose a Tag</option>
                             <?php foreach($tags as $key => $tag): ?>
                                 <?php if(!empty($tag_id) && $tag_id == $tag['id']): ?>
@@ -66,8 +66,8 @@
                             </label>
                         <?php endif; ?>                      
                     </div>
-                    <div>
-                        <button type="submit" name="add-post" class="btn btn-big">Share</button>
+                    <div class="button-div">
+                        <button type="submit" name="add-post" class="create-button">Share</button>
                     </div>
                 </form>
             </div>

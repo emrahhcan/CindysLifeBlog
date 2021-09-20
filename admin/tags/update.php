@@ -29,15 +29,14 @@
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div>
                         <label>Name</label>
-                        <input type="text" name="name" value="<?php echo $name; ?>" class="text-input">
+                        <input type="text" name="name" value="<?php echo $name; ?>" class="create-text">
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea name="description" id="body"><?php echo $description; ?></textarea>
-                    </div>
-                    
-                    <div>
-                        <button type="submit" name="update-tag" class="btn btn-big">Update Tag</button>
+                        <textarea name="description" id="body" class="create-textarea"><?php echo $description; ?></textarea>
+                    </div>             
+                    <div class="button-div">
+                        <button type="submit" name="update-tag" class="create-button">Update Tag</button>
                     </div>
                 </form>
             </div>

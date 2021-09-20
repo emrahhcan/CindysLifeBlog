@@ -29,19 +29,19 @@
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div>
                         <label>Title</label>
-                        <input type="text" name="title" value="<?php echo $title; ?>" class="text-input">
+                        <input type="text" name="title" value="<?php echo $title; ?>" class="create-text">
                     </div>
                     <div>
                         <label>Body</label>
-                        <textarea name="body" id="body"><?php echo $body; ?></textarea>
+                        <textarea name="body" id="body" class="ckeditor"><?php echo $body; ?></textarea>
                     </div>
                     <div>
                         <label>Image</label>
-                        <input type="file" name="image" class="text-input">
+                        <input type="file" name="image">
                     </div>
                     <div>
                         <label>Topic</label>
-                        <select name="tag_id" class="text-input">
+                        <select name="tag_id">
                             <option value="">Choose a Tag</option>
                             <?php foreach($tags as $key => $tag): ?>
                                 <?php if(!empty($tag_id) && $tag_id == $tag['id']): ?>
@@ -52,8 +52,8 @@
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    <div>
-                        <button type="submit" name="update-post" class="btn btn-big">Update Post</button>
+                    <div class="button-div">
+                        <button type="submit" name="update-post" class="create-button">Update Post</button>
                     </div>
                 </form>
             </div>
